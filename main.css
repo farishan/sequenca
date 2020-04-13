@@ -3,3 +3,43 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
+html {
+	font-family: sans-serif;
+}
+
+.header {
+	display: flex;
+	align-items: flex-end;
+	margin-bottom: 2rem;
+}
+
+.header h1 {
+	margin: 0;
+}
+
+.form {
+	max-width: 200px;
+	border: 1px solid;
+	padding: 1rem;
+}
+
+.form div {
+	margin-bottom: 1rem;
+}
+
+.form label {
+	color: #333;
+	margin-bottom: 0.25rem;
+	font-size: 0.9em;
+}
+
+.form input,
+.form button {
+	width: 100%;
+	padding: 0.25rem 1rem;
+}
+
+.form button {
+	padding: 1rem 2rem;
+}

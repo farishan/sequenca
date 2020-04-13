@@ -2,31 +2,39 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Sword Maker</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sequenca</title>
 	<link rel="stylesheet" href="main.css">
 </head>
 <body>
 	<div id="app">
-		<h1>Sword Maker</h1>
-
-		<div>
-			<label>list length</label><br>
-			<input type="num" v-model="listLength">
+		<div class="header">
+			<h1>Sequenca</h1>
+			<p><a href="https://github.com/farishan/sequenca" target="_blank">(What is this?)</a></p>
 		</div>
 
-		<div>
-			<label>min dmg</label><br>
-			<input type="num" v-model="min">
-		</div>
+		<form @submit="generate" class="form">
+			<div>
+				<label for="length">Sequence Length (Odd)</label><br>
+				<input autofocus type="num" v-model="listLength" id="length" required>
+			</div>
 
-		<div>
-			<label>max dmg</label><br>
-			<input type="num" v-model="max">
-		</div>
+			<div>
+				<label for="min">Min Value</label><br>
+				<input type="num" v-model="min" id="min" min="1" required>
+			</div>
 
-		<div>
-			<button @click="generate">generate</button>
-		</div>
+			<div>
+				<label>Max Value</label><br>
+				<input type="num" v-model="max" min="3" required>
+			</div>
+
+			<div>
+				<button>Generate</button>
+			</div>
+		</form>
+
+		<hr>
 
 		<div>
 			Damage Sequence:
@@ -37,7 +45,8 @@
 			</table>
 		</div>
 	</div>
-	<script src="vue.js"></script>
+	<script src="vue.min.js"></script>
+	<script src="core.js"></script>
 	<script src="main.js"></script>
 </body>
 </html>
